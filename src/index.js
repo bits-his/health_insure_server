@@ -43,6 +43,11 @@ require('./routes/register.js')(app);
 require('./routes/add_professionals.js')(app);
 require('./routes/register_organisation.js')(app);
 require('./routes/dependant_form.js')(app);
+require('./routes/formal_sector.js')(app);	
+require('./routes/formal_sector_scope.js')(app);	
+require('./routes/referral_codes.js')(app);	
+require('./routes/professional_service.js')(app);	
+require('./routes/drug_list.js')(app);	
 
 //create a server
 var server = app.listen(port, function() {

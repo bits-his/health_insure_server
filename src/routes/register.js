@@ -1,4 +1,4 @@
-const { register, get_register } = require("../controllers/register");
+const { register, get_register, getView, getBeneficiaries } = require("../controllers/register");
 const config = require("../config/config");
 
 module.exports = (app) => {
@@ -12,6 +12,8 @@ module.exports = (app) => {
     //    config.authRequest
     get_register
   );
+  app.get('/api/get-view',getView);
+  app.get('/api/get-beneficiary',getBeneficiaries)
  
 };
 

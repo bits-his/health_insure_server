@@ -1,4 +1,4 @@
-const {drug_list, get_drug_list,} = require("../controllers/drug_list");
+const {drug_list, get_drug_list, labService,} = require("../controllers/drug_list");
   const config = require("../config/config");
   
   module.exports = (app) => {
@@ -12,5 +12,6 @@ const {drug_list, get_drug_list,} = require("../controllers/drug_list");
       //    config.authRequest
       get_drug_list
     );
+    app.post('/api/lab-service',labService)
   };
   
